@@ -37,7 +37,7 @@ public class TransportController {
 	private TransportSevice transportSevice;
 
 	@PermitAll
-	@PostMapping("bus")
+	@PostMapping("/add/bus")
 	public ResponseEntity<?> addBus(@RequestBody BusEntity bus) {
 		Map<Object, Object> responseData = new HashMap<Object, Object>();
 		JSONResultEntity<HashMap> response = null;
@@ -55,7 +55,7 @@ public class TransportController {
 	}
 	
 	@PermitAll
-	@PutMapping("bus")
+	@PutMapping("/update/bus")
 	public ResponseEntity<?> updateBusDetails(@RequestBody BusEntity bus,@RequestParam("busId") long busId) {
 		Map<Object, Object> responseData = new HashMap<Object, Object>();
 		JSONResultEntity<HashMap> response = null;
@@ -73,7 +73,7 @@ public class TransportController {
 	}
 	
 	@PermitAll
-	@GetMapping("bus")
+	@GetMapping("/get/bus/details")
 	public ResponseEntity<?> getBusDetails() {
 		Map<Object, Object> responseData = new HashMap<Object, Object>();
 		JSONResultEntity<HashMap> response = null;
@@ -91,7 +91,7 @@ public class TransportController {
 	}
 
 	@PermitAll
-	@PostMapping("route")
+	@PostMapping("/add/route")
 	public ResponseEntity<?> addRoute(@RequestBody RouteEntity route) {
 		Map<Object, Object> responseData = new HashMap<Object, Object>();
 		JSONResultEntity<HashMap> response = null;
@@ -109,7 +109,7 @@ public class TransportController {
 	}
 	
 	@PermitAll
-	@PutMapping("route")
+	@PutMapping("/update/route")
 	public ResponseEntity<?> updateRouteDetails(@RequestBody RouteEntity route,@RequestParam("routeId") long routeId) {
 		Map<Object, Object> responseData = new HashMap<Object, Object>();
 		JSONResultEntity<HashMap> response = null;
@@ -127,7 +127,7 @@ public class TransportController {
 	}
 	
 	@PermitAll
-	@GetMapping("route")
+	@GetMapping("/get/route")
 	public ResponseEntity<?> getRouteDetails() {
 		Map<Object, Object> responseData = new HashMap<Object, Object>();
 		JSONResultEntity<HashMap> response = null;
@@ -145,7 +145,7 @@ public class TransportController {
 	}
 	
 	@PermitAll
-	@PostMapping("stop")
+	@PostMapping("/add/stop")
 	public ResponseEntity<?> addStop(@RequestBody StopEntity stop) {
 		Map<Object, Object> responseData = new HashMap<Object, Object>();
 		JSONResultEntity<HashMap> response = null;
@@ -163,7 +163,7 @@ public class TransportController {
 	}
 	
 	@PermitAll
-	@PutMapping("stop")
+	@PutMapping("/update/stop")
 	public ResponseEntity<?> updateStopDetails(@RequestBody StopEntity stop,@RequestParam("stopId") long stopId) {
 		Map<Object, Object> responseData = new HashMap<Object, Object>();
 		JSONResultEntity<HashMap> response = null;
@@ -181,7 +181,7 @@ public class TransportController {
 	}
 	
 	@PermitAll
-	@GetMapping("stop")
+	@GetMapping("/get/stop/details")
 	public ResponseEntity<?> getStopDetails() {
 		Map<Object, Object> responseData = new HashMap<Object, Object>();
 		JSONResultEntity<HashMap> response = null;
@@ -199,7 +199,7 @@ public class TransportController {
 	}
 	
 	@PermitAll
-	@PostMapping("route/stops")
+	@PostMapping("/add/route/stops")
 	public ResponseEntity<?> addRouteStops(@RequestBody RouteStopsEntity routeStop) {
 		Map<Object, Object> responseData = new HashMap<Object, Object>();
 		JSONResultEntity<HashMap> response = null;
@@ -217,7 +217,7 @@ public class TransportController {
 	}
 	
 	@PermitAll
-	@PutMapping("route/stops")
+	@PutMapping("/update/route/stops")
 	public ResponseEntity<?> updateRouteStopDetails(@RequestBody RouteStopsEntity routeStop,@RequestParam("routeStopId") long routeStopId) {
 		Map<Object, Object> responseData = new HashMap<Object, Object>();
 		JSONResultEntity<HashMap> response = null;
@@ -235,7 +235,7 @@ public class TransportController {
 	}
 	
 	@PermitAll
-	@GetMapping("route/stops")
+	@GetMapping("/get/route/stops/details")
 	public ResponseEntity<?> getRouteStopDetails() {
 		Map<Object, Object> responseData = new HashMap<Object, Object>();
 		JSONResultEntity<HashMap> response = null;
@@ -253,7 +253,7 @@ public class TransportController {
 	}
 	
 	@PermitAll
-	@DeleteMapping("route/stops")
+	@DeleteMapping("/delete/route/stops")
 	public ResponseEntity<?> deleteRouteStop(@RequestParam("routeStopId") long routeStopId) {
 		Map<Object, Object> responseData = new HashMap<Object, Object>();
 		JSONResultEntity<HashMap> response = null;
